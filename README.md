@@ -27,45 +27,54 @@ The goal of this project is to develop a logging library as well as a set of con
 
 
 ## Installation
+```
 git clone <репозиторий>
 cd LoggerLib
 mkdir -p build
 cd build
+```
 
 **1. Shared Libraries building**
+```
 cmake -DBUILD_SHARED_LIBS=ON ..
 make
+```
 
 **2. Static Libraries building**
+```
 cmake -DBUILD_SHARED_LIBS=ON ..
 make
+```
 
 ## Usage
 **1. Logger_example**
 i.  Initialization
+```
 cd logger/build
 ./logger_example <log_file> <default_severity_level>
+```
 
 Available severity level options: LOW | MEDIUM | HIGH
 Please note that Logger_example will igrore all incoming messages marked with lower than default severity level. 
 For example, if default severity level is MEDIUM, application would log MEDIUM and HIGH-marked messages, but not LOW.
 
-| Message  |   Default severity level  |
-| severity |---------------------------|
-|  level   |  LOW  |  MEDIUM  |  HIGH  |
-|----------|---------------------------|
-|   LOW    |   +   |    +     |   +    |
-|  MEDIUM  |   -   |    +     |   +    |
-|   HIGH   |   -   |    -     |   +    |
+
+|  Message\Default   |  LOW     MEDIUM     HIGH  |
+|--------------------|---------------------------|
+|       LOW          |   +   |    +     |   +    |
+|      MEDIUM        |   -   |    +     |   +    |
+|       HIGH         |   -   |    -     |   +    |
 
 ii. Writing messages
 Next, you'll be asked to enter your message as a plain string and chose it's severity level.
 Example:
 
+```
 Enter your message:
 <message_string>
 Enter severity level (LOW|MEDIUM|HIGH)
 <chosen_severity_level>
+```
 
 If chosen severity level is invalid or missing, it would be automatically set to default.
 
@@ -74,8 +83,10 @@ i.  Initialization
 
 Open another Terminal instance and execute following comands. Do not close previous console there Logger_example is running!
 
+```
 cd logger/lib
 ./log_stat_server --ip <ip> --port <port> --count <N> --timeout <T>
+```
 
 |  Parameter |                         Description                      | Default value |
 |------------|----------------------------------------------------------|---------------|
