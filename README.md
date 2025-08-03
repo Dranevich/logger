@@ -59,8 +59,8 @@ Please note that Logger_example will igrore all incoming messages marked with lo
 For example, if default severity level is MEDIUM, application would log MEDIUM and HIGH-marked messages, but not LOW.
 
 
-|  Message\Default   |  LOW     MEDIUM     HIGH  |
-|--------------------|---------------------------|
+|  Message\Default   |  LOW  |  MEDIUM  |  HIGH  |
+|--------------------|-------|----------|--------|
 |       LOW          |   +   |    +     |   +    |
 |      MEDIUM        |   -   |    +     |   +    |
 |       HIGH         |   -   |    -     |   +    |
