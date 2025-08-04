@@ -1,4 +1,50 @@
-# Module Logger_example
+# Unit test report
+
+
+The purpose of this testing is to control the compliance of individual modules of the developed project with the requirements of the Test Task, as well as to handle exceptional situations.
+
+**Basic Requirements:**
+- The developed library should have two build options: static and shared
+- The library should provide the ability of journal & socket logging
+- The library should provide the ability to filter messages by their severity level
+- The program should correctly process any kind of input data
+- The program should provide the output of statistical data in accordance with the requirements of the Test Task.
+
+**Test bench configuration:**
+
+- VirtualBox (v.7.1.10) VM
+- Ubuntu 24.04.2 LTS
+- Intel Core i7-14700HX x 6
+- 13.8 GiB Memory
+
+**Test scenario:**
+
+User-story, i.e. simulation of user actions during software installation and execution.
+
+**Result:**
+
+27/27 tests passed
+
+## Test 0: Build types
+
+**Test Description**
+
+Trying to build project with both types (static/dynamic) of libraries.
+
+**Test Requrements**
+
+Project should be successfully built in both cases.
+
+|    Description     |             Input values         | Expected behaviour|  Real behaviour  |
+|--------------------|----------------------------------|-------------------|------------------|
+|   Static Library   | cmake -DBUILD_SHARED_LIBS=OFF .. |       Success     | Matches expected |
+|   Shared Library   | cmake -DBUILD_SHARED_LIBS=ON ..  |       Success     | Matches expected |
+
+**Screenshots**
+
+![Test Zero-shared](https://github.com/Dranevich/logger/blob/main/screens/Test01.jpg)
+
+![Test Zero-static](https://github.com/Dranevich/logger/blob/main/screens/Test02.jpg)
 
 ## Test 1: Running the program with different sets of input parameters
 
