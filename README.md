@@ -28,7 +28,7 @@ The goal of this project is to develop a logging library as well as a set of con
 
 ## Installation
 ```
-git clone <репозиторий>
+git clone https://github.com/Dranevich/logger
 cd LoggerLib
 mkdir -p build
 cd build
