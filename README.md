@@ -29,7 +29,7 @@ The goal of this project is to develop a logging library as well as a set of con
 ## Installation
 ```
 git clone https://github.com/Dranevich/logger
-cd LoggerLib
+cd logger
 mkdir -p build
 cd build
 ```
