@@ -48,7 +48,8 @@ make
 
 ## Usage
 **1. Logger_example**
-i.  Initialization
+
+***i.  Initialization***
 ```
 cd logger/build
 ./logger_example <log_file> <default_severity_level>
@@ -65,7 +66,7 @@ For example, if default severity level is MEDIUM, application would log MEDIUM a
 |      MEDIUM        |   -   |    +     |   +    |
 |       HIGH         |   -   |    -     |   +    |
 
-ii. Writing messages
+***ii. Writing messages***
 Next, you'll be asked to enter your message as a plain string and chose it's severity level.
 Example:
 
@@ -79,7 +80,8 @@ Enter severity level (LOW|MEDIUM|HIGH)
 If chosen severity level is invalid or missing, it would be automatically set to default.
 
 **2.Log_stat_server**
-i.  Initialization
+
+***i.  Initialization***
 
 Open another Terminal instance and execute following comands. Do not close previous console there Logger_example is running!
 
@@ -97,7 +99,7 @@ cd logger/lib
 
 If any parameters is invalid or missing, they would be automatically set to default values.
 
-ii. Tracking the statistics
+***ii. Tracking the statistics***
 
 Next, you'll have to wait until some message would be recieved. You can send them via Logger_example window.
 
@@ -106,6 +108,9 @@ a. After recieving every N messages;
 b. After every timeout interval if there were any new data.
 
 # About the author
+
 Author: Dranevich Anastasya
+
 Developed as part of the internship Test Task.
+
 Technologies: C++17, Linux, POSIX sockets, STL, multithreading.
